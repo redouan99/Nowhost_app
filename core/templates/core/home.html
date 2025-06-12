@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NowHost - Home</title>
+</head>
+<body>
+    <h1>Welkom bij NowHost!</h1>
+
+    {% if user.is_authenticated %}
+        <p>Hallo, {{ user.username }} 👋</p>
+        <p><a href="/accounts/logout/">Uitloggen</a></p>
+        <p><a href="/dashboard/">Ga naar je dashboard</a></p>
+    {% else %}
+        <p><a href="/accounts/login/">Inloggen</a> | <a href="/register/">Registreren</a></p>
+    {% endif %}
+</body>
+</html>
